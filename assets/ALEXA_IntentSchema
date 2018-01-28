@@ -1,12 +1,109 @@
 {
-  "intents": [
-    {
-      "name": "HelloWorldIntent",
-      "samples": [
-        "say hello",
-        "say hi"
-      ],
-      "slots": []
-    }
-  ]
+  "languageModel": {
+    "types": [
+      {
+        "name": "MOVIE_NAMES",
+        "values": [
+          {
+            "id": null,
+            "name": {
+              "value": "revenant",
+              "synonyms": []
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "titanic",
+              "synonyms": []
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "iron man",
+              "synonyms": []
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "sherlock",
+              "synonyms": []
+            }
+          }
+        ]
+      }
+    ],
+    "intents": [
+      {
+        "name": "AMAZON.CancelIntent",
+        "samples": []
+      },
+      {
+        "name": "AMAZON.HelpIntent",
+        "samples": []
+      },
+      {
+        "name": "AMAZON.NoIntent",
+        "samples": [
+          "no"
+        ]
+      },
+      {
+        "name": "AMAZON.StopIntent",
+        "samples": []
+      },
+      {
+        "name": "AMAZON.YesIntent",
+        "samples": [
+          "yes"
+        ]
+      },
+      {
+        "name": "MovieInfo",
+        "samples": [
+          "say about {Name}",
+          "find about {Name}",
+          "say details about {Name}",
+          "tell me the details about {Name}",
+          "tell me the details on {Name}"
+        ],
+        "slots": [
+          {
+            "name": "Name",
+            "type": "MOVIE_NAMES"
+          }
+        ]
+      },
+      {
+        "name": "MovieReview",
+        "samples": [
+          "what is the review of {Name}",
+          "find the review of {Name}",
+          "find the reviews of {Name}"
+        ],
+        "slots": [
+          {
+            "name": "Name",
+            "type": "MOVIE_NAMES"
+          }
+        ]
+      },
+      {
+        "name": "ReleaseDate",
+        "samples": [
+          "what is the release date of {Name}",
+          "tell the release date of {Name}"
+        ],
+        "slots": [
+          {
+            "name": "Name",
+            "type": "MOVIE_NAMES"
+          }
+        ]
+      }
+    ],
+    "invocationName": "getmoviedetails"
+  }
 }
