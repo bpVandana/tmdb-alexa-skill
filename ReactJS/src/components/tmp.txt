@@ -1,0 +1,21 @@
+<div className={classes.root}>
+  <ExpansionPanel onClick={this.handleClick}>
+    <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+      <Typography className={classes.heading}>Expansion Panel 1</Typography>
+    </ExpansionPanelSummary>
+    <ExpansionPanelDetails>
+      <Typography>
+        {this.state.table.map(e => (
+                  <div>
+                     <span>{e.sno}</span>
+                     <span>{e.reqtext}</span>
+                     <span>{e.time}</span>
+                  </div>
+
+             ))}
+
+      </Typography>
+    </ExpansionPanelDetails>
+  </ExpansionPanel>
+
+</div>
