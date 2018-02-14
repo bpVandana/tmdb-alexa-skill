@@ -1,27 +1,15 @@
-# HPDF T67NE1 Alexa Movie Database skill
-
-This skill is part of the HPDF submission.
-
-- Alexa skill for Movie Database 
-- Configure with custom HTTPS url than aws lambda
-
-# Installation
-
-- Install [ node ] -8.
-- Clone this repository.
-- CD to tmdb-alexa-skill.
-- run ``` npm install ```
-- run ``` node server ```.
-- Head over to [ Amazon Developer console ]
-- Create the interaction model refering db/ALEXA_intentSchema
-
-# Running
-
-- Configure the skill with cluster end point [here]
-- Alexa skills are tested with [ Echosim.io ]
-
-[node]:<https://nodejs.org/en/>
-
-[Echosim.io]:<https://echosim.io/welcome>
-[here]:<https://bot.embargo25.hasura-app.io/webhook>
-[ Amazon Developer console ]:<http://developer.amazon.com>
+//Overview
+//Requirements
+//How to deploy
+    //clone
+    //setting amazon development account
+        ~Go to amazon developer page, register there
+        ~In Dashboard go the alexa tab and select Alexa Skill kit
+        ~Add New Skill <img>
+        ~on Interaction model - code editor - paste(also upload) - save build
+        ~configuration tab -setup as <img> - Default - https://api.<cluster>...
+        ~ssl certificate - ` My development endpoint is a sub-domain of a domain that has a wildcard certificate from a certificate authority` 
+        ~Test
+//Web Application
+        ~ Use hasura database api where the req and res are stored in the actual json format
+//Mobile Application

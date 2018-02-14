@@ -18,13 +18,12 @@ let intentMap = {
 app.setIntentMap(intentMap);
 
 // Listen for post requests
-webhook.listen(3000, function() {
-    console.log('Local development server listening on port 3000.');
+webhook.listen(8080, function() {
+    console.log('Local development server listening on port 8080.');
 });
 
 webhook.post('/webhook', function(req, res) {
     reqtest(req);
-    //restest(res);
     app.handleRequest(req, res, handlers);
     app.execute();
     restest(res);
@@ -36,7 +35,7 @@ webhook.post('/webhook', function(req, res) {
       //The logging into the requests table
 function reqtest(req){
   let strvalue = JSON.stringify(req.body);
-  const dbUrl = `https://data.<cluster-name>.hasura-app.io/v1/query`;
+  const dbUrl = `https://data.actress71.hasura-app.io/v1/query`;
   var requestOptions = {
       "method": "POST",
       "headers": {
@@ -75,9 +74,9 @@ function reqtest(req){
       //The logging into the response table
 function restest(res){
   //let strvalue = CircularJSON.stringify(res);
-  //console.log(res);
+  console.log(res.socket.parser.incoming.body);
   let restest = JSON.stringify(res.socket.parser.incoming.body);
-  const dbUrl = `https://data.<cluster-name>.hasura-app.io/v1/query`;
+  const dbUrl = `https://data.actress71.hasura-app.io/v1/query`;
   var requestOptions = {
       "method": "POST",
       "headers": {
@@ -135,12 +134,13 @@ const handlers = {
               var speech = 'I found a movie named,'+result.title
                             +' with an average rating of '
                             +result.vote_average
-                            +' The overview of the movie is like this,'
+                            +'out of 10.'
+                            +'The overview of the movie is: '
                             +result.overview;
                 app.tell(speech);
               }else{
                 test();
-                var speech = `I am unable to find the movie.`;
+                var speech = `Sorry, I am unable to find the movie.`;
                 app.tell(speech);
               }
             }
