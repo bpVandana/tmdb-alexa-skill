@@ -1,4 +1,20 @@
 {
-  "name": "TMDB",
-  "displayName": "TMDB"
+  "expo": {
+    "name": "Alexa logs",
+    "version": "1.0.2",
+    "slug": "alexa-logs",
+    "sdkVersion": "25.0.0",
+    "ios": {
+    "bundleIdentifier": "com.artistrycrew.aleaxlogs"
+  },
+    "android": {
+    "package": "com.artistycrew.alexalogs"
+  },
+    "icon": "./assets/logo.png",
+    "splash": {
+      "image": "./assets/logo.png",
+      "backgroundColor": "#37989e"
+
+}
+  }
 }
