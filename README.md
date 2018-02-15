@@ -81,5 +81,5 @@ I don't find docs as easy for beginners.
 - [Developing alexa skill](https://www.youtube.com/watch?v=QxgdPI1B7rg)
 - [Spin Atomic Article](https://spin.atomicobject.com/2017/01/13/alexa-skill-on-heroku/)
 # Support
-Feel free to create the issue here or mail me at vipulrawat.imi@live.in
+Feel free to create the [issue](https://github.com/vipulrawat/tmdb-alexa-skill/issues) here or mail me at vipulrawat.imi@live.in
 
