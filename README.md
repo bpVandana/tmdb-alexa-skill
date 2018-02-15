@@ -45,6 +45,29 @@ __NOTE:__ _The device or testing simulator should be logged in via the same emai
 
 Head over to the directory `/microservices/api/src` and there lies all your source code files, you can alter it accordingly and even code from start.
 
+# Built in Web-Application 
+<img of webpage>
+This quickstart comes with the web-application built on ReactJS and an Android App built using ReactNative to show the logs of the skill.
+Demo: [https://ui.<my-cluster-name>.hausra-app.io]
+
+- To check the code go to `/microservice/ui/app/src` in your directory.
+- To run locally you need these steps, make sure you are in `/microservice/ui/app` and ReactJS installed.
+
+```sh
+$ npm install
+$ npm start
+```
+# Built-in Mobile Application
+
+Demo: [Download the apk](https://drive.google.com/file/d/1foaEL8r1wAxRlIcbINdRN6o4Q7IBjTmv/view?usp=sharing)
+* Clone this repo.
+ * cd to react-native/
+ * run `npm start`
+ * open the app in expo.
+ * Check for the console logs about the cluster status.
+ * If the cluster is waking try again after some time.
+ * Once the app is opened click `TMDB Alexa logs`
+ * Fetched JSON will render in the app.
 # Resources to study
 Trust me on official docs are the best resources to start with.
  - [Hasura Docs](https://docs.hasura.io/0.15/manual/getting-started/index.html)
