@@ -6,10 +6,11 @@
  > Logs made to alexa the Movie Database custom skill
  > will be show in this app.
 
- Dowload the [apk here](https://drive.google.com/file/d/1foaEL8r1wAxRlIcbINdRN6o4Q7IBjTmv/view?usp=sharing)
- 
+ Dowload the
+ [apkhere](https://drive.google.com/file/d/1Ic3K8_6Kq1xuLtqek154yeU3Bg_InLzw/view?usp=sharing)
+
  ## Steps
- 
+
  * Clone this repo.
  * cd to react-native/
  * run `npm start`
@@ -18,9 +19,12 @@
  * If the cluster is waking try again after some time.
  * Once the app is opened click `TMDB Alexa logs`
  * Fetched JSON will render in the app.
- 
+
+## SCREENSHOTS
+ ![SPLASH SCREEN](./assets/splash.png)
+
  ## Few Tips
- 
+
 ### `npm start`
 
 Runs your app in development mode.
@@ -44,6 +48,3 @@ Runs the [jest](https://github.com/facebook/jest) test runner on your tests.
 Like `npm start`, but also attempts to open your app in the iOS Simulator if you're on a Mac and have it installed.
 
 #### `npm run android`
-
-Like `npm start`, but also attempts to open your app on a connected Android device or emulator. Requires an installation of Android build tools (see [React Native docs](https://facebook.github.io/react-native/docs/getting-started.html) for detailed setup). We also recommend installing Genymotion as your Android emulator.
-

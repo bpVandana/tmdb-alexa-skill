@@ -1,25 +1,19 @@
 import React from 'react';
-import { Alert, StyleSheet } from 'react-native';
+import { Alert, StyleSheet, ScrollView } from 'react-native';
 import { Container, Text, Button, Card, CardItem, Icon, Header, Left, Body, Title, Content, Spinner} from 'native-base';
-import { getResLogs } from '../hasuraApi';
-import Response from './response';
-import Req2 from './req2';
-import Req3 from './req3';
-import Resp2 from './resp2';
-import Resp3 from './resp3';
+import { getLogs } from '../hasuraApi';
 
 export default class Request extends React.Component {
   constructor(props){
     super(props);
     this.state={
-      // articleId: props.articleId,
       articleObj: null,
       fontsAreLoaded: false,
     }
   }
 
   async componentDidMount(){
-    let articleObj = await getResLogs();
+    let articleObj = await getLogs();
     if(articleObj.status === 200){
       articleObjJson = await articleObj.json();
       this.setState({
@@ -29,7 +23,7 @@ export default class Request extends React.Component {
       if (articleObj.status === 504) { //change from articleList
         Alert.alert('Network error', 'Check your internet connection');
       } else {
-        Alert.alert('Something went wrong', 'Please check table permissions and your internet connection')
+        Alert.alert('Cluster is waking please try again later', 'Something went wrong', 'Please check table permissions and your internet connection')
       }
     }
 
@@ -51,17 +45,14 @@ export default class Request extends React.Component {
               <Title>Request Json</Title>
             </Body>
           </Header>
+          <ScrollView contentContainerStyle={styles.contentContainer}>
               <Text style={styles.red}>Serial:</Text>
               <Text>    {this.state.articleObj.Serial}</Text>
               <Text style={styles.red}>Request Json: </Text>
               <Text>    {this.state.articleObj.json}</Text>
               <Text style={styles.red}>Time: </Text>
               <Text>    {this.state.articleObj.time}</Text>
-              <Response />
-              <Req2 />
-              <Resp2 />
-              <Req3 />
-              <Resp3 />
+          </ScrollView>
           </Content>
         </Container>
       )
@@ -79,12 +70,16 @@ export default class Request extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  bigblue: {
-    color: 'blue',
-    fontWeight: 'bold',
-    fontSize: 30,
-  },
   red: {
     color: 'red',
   },
+  contentContainer: {
+    paddingVertical: 30,
+    paddingLeft: 10,
+    paddingRight: 20,
+    marginBottom: 20,
+    borderColor: "#056b84",
+    borderWidth: 20,
+    backgroundColor: "#d0d1db"
+  }
 });

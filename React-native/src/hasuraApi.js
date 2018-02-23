@@ -1,4 +1,4 @@
-const clusterName = "actress71"
+const clusterName = "advisedly28" //Change Your clusterName Here...
 const dataUrl = "https://data."+clusterName+".hasura-app.io/v1/query";
 
 import React, { Component } from 'react';
@@ -7,7 +7,7 @@ const networkErrorObj = {
   status: 503
 }
 
-export async function getLogs(){
+export async function getResLogs(){     //Getting response JSON
   console.log('Making data query(get Request)');
   let requestOptions = {
       "method": "POST",
@@ -39,7 +39,7 @@ export async function getLogs(){
   }
 }
 
-export async function getResLogs() {
+export async function getLogs() {     //Getting Request JSON 
   console.log('Making data query (get response logs)');
   let requestOptions = {
       "method": "POST",

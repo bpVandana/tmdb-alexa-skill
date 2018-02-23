@@ -1,8 +1,8 @@
 {
   "expo": {
     "name": "Alexa logs",
-    "version": "1.0.2",
-    "slug": "alexa-logs",
+    "version": "1.1.2",
+    "slug": "alexa-Logs",
     "sdkVersion": "25.0.0",
     "ios": {
     "bundleIdentifier": "com.artistrycrew.aleaxlogs"

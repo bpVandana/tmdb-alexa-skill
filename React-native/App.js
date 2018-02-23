@@ -1,19 +1,16 @@
 import React, { Component } from 'react';
 import { Text, View } from 'react-native';
-import { Container, Header, Tab, Tabs } from 'native-base';
-import Request from './src/Components/request';
+import { Container, Body, Header, Title, Tab, Tabs } from 'native-base';
+import Home from './src/Components/Home';
 
-export default class Home extends Component {
+
+export default class App extends Component {
   render() {
     return (
       <Container>
-    <Header hasTabs />
-    <Tabs initialPage={1}>
-      <Tab heading="TMDB Alexa logs">
-        <Request />
-      </Tab>
-    </Tabs>
-  </Container>
+        <Home />
+      </Container>
+
     );
   }
 }
