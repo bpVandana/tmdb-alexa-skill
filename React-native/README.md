@@ -20,11 +20,9 @@
  * Once the app is opened click `TMDB Alexa logs`
  * Fetched JSON will render in the app.
 
-## SCREENSHOTS
- ![SPLASH SCREEN](./assets/splash.png)
 
  ## Few Tips
-
+  If the "Check your table permission error occurs it indicates that the cluster may awake at this time.Please be patient and try after some time.
 ### `npm start`
 
 Runs your app in development mode.
@@ -48,3 +46,11 @@ Runs the [jest](https://github.com/facebook/jest) test runner on your tests.
 Like `npm start`, but also attempts to open your app in the iOS Simulator if you're on a Mac and have it installed.
 
 #### `npm run android`
+
+## SCREENSHOTS
+ ![SPLASH SCREEN](./assets/splash.png)
+ 
+ ![REQUEST JSON](./assets/request.png)
+ 
+ ![RESPONSE JSON](./assets/response.png)
+
