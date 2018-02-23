@@ -13,6 +13,7 @@
 
  * Clone this repo.
  * cd to react-native/
+ * Change the cluster name in Src/hasuraApi.js
  * run `npm start`
  * open the app in expo.
  * Check for the console logs about the cluster status.
