@@ -6,7 +6,7 @@ This alexa skill gives the information about the movies asked for it. The inform
 # How to use?
 
   - The skill uses the Official TMDB API to extract the information.
-  - The skill is invoked by saying "Ask getmoviedetails to find about sherlock" or "Ask getmoviedetail to find the review of titanic"
+  - The skill is invoked by saying _"Ask getmoviedetails to find about sherlock"_ or _"Ask getmoviedetail to find the review of titanic"_
 # Implementation
 Amazon Alexa development provides two ways to develop the skill one is to use their very own Amazon Lambda serives and other is to code in any preferred language and use the webserives to deploy the skill. This skill is coded in Node.js and used jovo framework.
   - When the skill in invoked the skill request the API and fetch the response in json, If the movie is found is tell the user about it after proper parsing of the response json from the API and if the movie is not found it tells the inability to find the details.
