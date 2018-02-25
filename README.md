@@ -28,9 +28,8 @@ $ git push hasura master
 ### Amazon developer setup
 
 Now your skill is deployed (Hope So!). You need to head over to the [Amazon Developer Portal](https://developer.amazon.com) and register yourself up if not so the start building the skill. I'll not go through the steps of making account in amazon presuming that you are well enough in doing that. Jump to the alexa tab in developer console and click on create new skill.
-
+<img src="https://github.com/vipulrawat/tmdb-alexa-skill/blob/master/assets/images/amz-1.png">
  - Name the skill anything, say `Movie details` and give it a invocation name _(this is important as this name will be used to start/open the skill)_ , lets name it `getmoviedetails`
- <img src="https://github.com/vipulrawat/tmdb-alexa-skill/blob/master/assets/images/amz-1.png">
  - Go to the iteraction model and then to the _Code Editor_ tab (Hope you are in new Skill Building environment, blue themed screen,if not there will be an option to go to the Skill Builder Beta)
  - Copy the intent schema from the `microservices/api/src/assets` folder in your directory and paste it there. Save the model and Build it.
  - Now in the `Configuration` tab in amazon developer console, select _HTTPS_ as _Service Endpoint Type_. Place the [https://api.advisedly28.hasura-app.io](https://api.advisedly28.hasura-app.io) URL at default field and click Next.
